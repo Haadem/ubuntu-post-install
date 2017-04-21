@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Dropbox
-function dropbox {
+function pycharm {
 	# Variables
 	PACKAGE=pycharm
 	NAME="pycharm"
@@ -16,10 +16,12 @@ function dropbox {
 		# Download Debian file that matches system architecture
 		case `uname -i` in
 			i386|i486|i586|i686)
-				curl -O https://linux.dropbox.com/packages/ubuntu/dropbox_2.10.0_i386.deb
+				
 				;;
 			x86_64)
-				curl -O https://linux.dropbox.com/packages/ubuntu/dropbox_2.10.0_amd64.deb
+				wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add 
+				sudo apt update
+				sudo apt install pycha
 				;;
 			*)
 				whiptail --title "No remote packages available to download." --msgbox "Error." 8 78

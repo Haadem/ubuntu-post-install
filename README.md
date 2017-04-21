@@ -5,6 +5,8 @@ Original Author: [Sam Hewitt](https://github.com/snwh)
 
 > This project is my set of post-installation and maintenance scripts for Ubuntu, to run on a fresh install. It's designed to install your favourite applications, set your preferred settings, etc. mostly automatically. 
 
+Modifying Author: [Sven Haadem](https://github.com/haadem)
+
 Feel free to fork this project, modify to suit your preference, and distribute.
 
 ##Structure

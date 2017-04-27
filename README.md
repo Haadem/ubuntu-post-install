@@ -12,7 +12,7 @@ Modifying Author: [Sven Haadem](https://github.com/haadem)
 
 Feel free to fork this project, modify to suit your preference, and distribute.
 
-##Structure
+## Structure
 
 This project is coded and organized in a modular fashion so you can easily delete or exclude parts that you don't want to use.
 
@@ -20,7 +20,7 @@ This project is coded and organized in a modular fashion so you can easily delet
  * [`functions`](/functions): this folder contains bash files which are the main functions of this scriptset. They should require little modification.
  * [`third-party`](/functions/third-party): this sub-directory contains further bash files that are functions for the installation of third-party applications &ndash;i.e. those that aren't necessarily in the main repositories.
 
-##Usage
+## Usage
 
 Simple, you just run the main script from the root of the source folder:
 

@@ -40,6 +40,7 @@ dir="$(dirname "$0")"
 . $dir/functions/update
 . $dir/functions/utilities
 . $dir/functions/py_pck
+. $dir/functions/github
 
 #----- Fancy Messages -----#
 show_error(){

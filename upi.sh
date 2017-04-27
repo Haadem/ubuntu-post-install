@@ -42,7 +42,7 @@ dir="$(dirname "$0")"
 . $dir/functions/py_pck
 . $dir/functions/github
 . $dir/functions/ml
-. $dir/functions/rep
+. $dir/functions/reps
 
 #----- Fancy Messages -----#
 show_error(){
@@ -85,7 +85,7 @@ function main {
 		github      'GITHUB:       Clone and install applications from GitHub' \
 		ml          'ML:           Setup a Machine Learning enviroment' \
 		py_pck      'PYTHON:       Install Python and Python packages' \
-		rep         'REPOS:       Install repository packages' \
+		reps        'REPOS:       Install repository packages' \
 		development 'TOOLS:        Install preferred development tools' \
 		update	    'UPDATE:       Perform system update' \
 		3>&1 1>&2 2>&3)

@@ -67,6 +67,20 @@ function dconf {
 	configure
 }
 
+
+# 
+function basic {
+	show_info 'Copying dconf db'
+	show_warning 'Requires root privileges'
+	mkdir ~/projects
+	sudo cp ./data/functions /etc/functions
+	# Done
+	show_success 'Done.'
+	whiptail --title "Finished" --msgbox "Settings changed successfully." 8 78
+	configure
+}
+
+
 # Configure System
 function configure {
 	eval `resize`
@@ -76,7 +90,8 @@ function configure {
 		--menu "\nWhat would you like to do?" \
 		--cancel-button "Go Back" \
 		$LINES $COLUMNS $(( $LINES - 12 )) \
-		config_files 'Config bash profile, ubuntu profile, git profile, ssh profile.' \
+		basic 'Setup basics.' \
+		config_files 'Copy backuped bash profile, ubuntu profile, git profile, ssh profile.' \
 		preferences 'Set preferred application-specific & desktop settings' \
 		dconf 'Copy backuped dconf settings database' \
 		startup	 'Show all startup applications' \

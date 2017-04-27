@@ -5,7 +5,7 @@ function spark {
 	# Variables
 	PACKAGE=spark
 	NAME="spark"
-	VERSION="1.6"
+	VERSION="2.1"
 	# Install
 	show_header 'Begin '$NAME' installation'
 	# Check if already installed
@@ -15,16 +15,18 @@ function spark {
 	if [ "" == "$PKGCHECK" ]; then
 		echo $NAME 'is not installed. Proceeding'
 		show_info 'Downloading '$NAME' version $VERSION...'
-		wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.0.tgz
+		wget http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz
 		# Install package(s)
 		show_info 'Installing '$NAME'...'
 		show_warning 'Requires root privileges'
-		sudo tar xvf spark-1.6.0.tgz
-		cd spark-1.6.0
+		sudo tar xvf spark-2.1.0-bin-hadoop2.7.tgz  -C /usr/local
+		grep -q -F 'export SPARK_HOME' ~/.bashrc || echo 'export SPARK_HOME=/usr/local/spark-2.1.0-bin-hadoop2.7' >> ~/.bashrc
+		#echo 'export SPARK_HOME=/usr/local/spark-2.1.0-bin-hadoop2.7' >> ~/.bashrc 
+		echo 'export PATH=$SPARK_HOME/bin:$PATH' >> ~/.bashrc 
+		rm park-2.1.0-bin-hadoop2.7.tgz
+		cd park-2.1.0-bin-hadoop2.7
 		sbt/sbt assembly
 		# Cleanup and finish
-		cd ..
-		rm spark-1.6.0.tgz
 		# Done
 		show_success 'Done.'
 		whiptail --title "Finished" --msgbox "Installation of $NAME complete." 8 78

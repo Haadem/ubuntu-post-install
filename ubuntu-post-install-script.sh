@@ -76,14 +76,14 @@ function main {
 		--menu "\nWhat would you like to do?" \
 		--cancel-button "Quit" \
 		$LINES $COLUMNS $(( $LINES - 11 )) \
-		favs	   'APPS: Install preferred applications' \
-		thirdparty  'APPS SELECT: Install third-party applications' \
-		cleanup	 'CLEAN: Cleanup the system' \
-		configure   'CONFIG: Configure system' \
-		github  'GITHUB: Clone and install applications from GitHub' \
-		py_pck 'PYTHON: Install Python and Python packages' \
-		development 'TOOLS: Install preferred development tools' \
-		update	  'UPDATE: Perform system update' \
+		favs	    'APPS:         Install preferred applications' \
+		thirdparty  'APPS SELECT:  Install third-party applications' \
+		cleanup	    'CLEAN:        Cleanup the system' \
+		configure   'CONFIG:       Configure system' \
+		github      'GITHUB:       Clone and install applications from GitHub' \
+		py_pck      'PYTHON:       Install Python and Python packages' \
+		development 'TOOLS:        Install preferred development tools' \
+		update	    'UPDATE:       Perform system update' \
 		3>&1 1>&2 2>&3)
 	 
 	exitstatus=$?

@@ -5,7 +5,6 @@ dir="$(dirname "$0")"
 source $dir/functions/third-party/dropbox
 source $dir/functions/third-party/google-chrome
 source $dir/functions/third-party/inkscape
-source $dir/functions/third-party/minecraft
 source $dir/functions/third-party/oracle-java
 source $dir/functions/third-party/peek
 source $dir/functions/third-party/rvm
@@ -29,7 +28,6 @@ function thirdparty {
 		'fontforge'		 'FontForge' \
 		'google-chrome'	 'Google Chrome' \
 		'inkscape'		  'Inkscape' \
-		'minecraft'		 'Minecraft' \
 		'oracle-java'	   'Oracle Java' \
 		'peek'			  'Peek' \
 		'rvm'			   'Ruby Version Manager (RVM)' \
@@ -37,7 +35,7 @@ function thirdparty {
 		'spotify'		   'Spotify' \
 		'steam'			 'Steam' \
 		'sublime-text'	  'Sublime Text 3' \
-		'pycharm'	  'Pycharm - Intelij Python IDE' \
+		'pycharm'	  'Pycharm - IntelliJ Python IDE' \
 		3>&1 1>&2 2>&3)
 	 
 	exitstatus=$?

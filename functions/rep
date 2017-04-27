@@ -1,0 +1,34 @@
+#!/bin/bash
+
+dir="$(dirname "$0")"
+
+REPS="$dir/data/reps.list"
+
+# Install preferred repositories using the list of packages 'data/reps.list'
+function reps {
+	if (eval `resize` && whiptail \
+		--title "Preferred Repositories" \
+		--yesno "Current list of preferred repositories to install: \n\n$(cat $REPS) \n\nProceed with installation?" \
+		$LINES $COLUMNS $(( $LINES - 12 )) \
+		--scrolltext) then
+		show_info 'Installing...'
+		show_warning 'Requires root privileges'
+		sudo add-apt-repository -y $(cat $REPS)
+    sudo apt-get -y --force-yes update
+		# Done
+		show_success 'Done.'
+		# Check
+		EXITSTATUS=$1
+		if [[ $EXITSTATUS != 0 ]]; then
+			# Already installed
+			show_success 'Already installed.'
+			whiptail --title "Finished" --msgbox "Your preferred repositories are installed." 8 78
+			main
+		else
+			whiptail --title "Finished" --msgbox "Installation complete." 8 78
+			main
+		fi
+	else
+		main
+	fi
+}

@@ -78,7 +78,7 @@ function basic {
 	set +v
 	# Done
 	show_success 'Done.'
-	read -t5 -n1 -r -p 'Basic setup finished successfully. Press any key in the next five seconds...' key
+	read -t20 -n1 -r -p 'Basic setup finished successfully. Press any key to continue or wait 20 seconds...' key
 	#whiptail --title "Finished" --msgbox "Basic setup finished successfully." 8 78
 	configure
 }

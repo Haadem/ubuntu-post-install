@@ -3,16 +3,21 @@
 # data_anal
 function data_anal {
     # Install
-    NAME1="Numpy"
+    NAME1="numpy"
     show_info 'Installing '$NAME1'...'
     sudo pip3 install $NAME1
     show_info 'Updating repository information...'
     sudo pip3 install --upgrade $NAME1
     show_success 'Done.'
     # Install
-
+    NAME2="scipy"
+    show_info 'Installing '$NAME2'...'
+    sudo pip3 install $NAME2
+    show_info 'Updating repository information...'
+    sudo pip3 install --upgrade $NAME2
+    show_success 'Done.'
     # Done
     show_success 'Done.'
-    whiptail --title "Finished" --msgbox "Installation of $NAME1 complete." 8 78
+    whiptail --title "Finished" --msgbox "Installation of $NAME1, $NAME2 complete." 8 78
     py_pck
 }

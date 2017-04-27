@@ -16,12 +16,10 @@ function pycharm {
 		# Download Debian file that matches system architecture
 		case `uname -i` in
 			i386|i486|i586|i686)
-				
+				wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add 
 				;;
 			x86_64)
 				wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add 
-				sudo apt update
-				sudo apt install pycha
 				;;
 			*)
 				whiptail --title "No remote packages available to download." --msgbox "Error." 8 78
@@ -30,10 +28,9 @@ function pycharm {
 		# Install package(s)
 		show_info 'Installing '$NAME'...'
 		show_warning 'Requires root privileges'
-		sudo dpkg -i dropbox*.deb
-		sudo apt-get install -fy
+		sudo apt update
+		sudo apt install pycharm
 		# Cleanup and finish
-		rm dropbox*.deb
 		# Done
 		show_success 'Done.'
 		whiptail --title "Finished" --msgbox "Installation of $NAME complete." 8 78

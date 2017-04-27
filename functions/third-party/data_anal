@@ -4,5 +4,4 @@
 function data_anal {
     pip3 install numpy
     py_pck
-    fi
 }

@@ -73,17 +73,24 @@ function main {
 		--menu "\nWhat would you like to do?" \
 		--cancel-button "Quit" \
 		$LINES $COLUMNS $(( $LINES - 12 )) \
-		update	  'Perform system update' \
-		favs		'Install preferred applications' \
-		utilities   'Install preferred system utilities' \
-		development 'Install preferred development tools' \
-		codecs	  'Install Ubuntu Restricted Extras' \
-		thirdparty  'Install third-party applications' \
-		github  'Clone and install applications from GitHub' \
-		gnome	   'Install latest GNOME software' \
-		py_pck 'Install Python and Python packages' \
-		configure   'Configure system' \
-		cleanup	 'Cleanup the system' \
+		favs	   'APPS: Install preferred applications' \
+		thirdparty  'APPS SELECT: Install third-party applications' \
+		cleanup	 'CLEAN: Cleanup the system' \
+		configure   'CONFIG: Configure system' \
+		#codecs	  'EXTRA: Install Ubuntu Restricted Extras' \
+		github  'GITHUB: Clone and install applications from GitHub' \
+		py_pck 'PYTHON: Install Python and Python packages' \
+		development 'TOOLS: Install preferred development tools' \
+		update	  'UPDATE: Perform system update' \
+		utilities  'UTILITIES: Install preferred system utilities' \
+		
+		
+		
+		
+		#gnome	   'GNOME: Install latest GNOME software' \
+		
+		
+		
 		3>&1 1>&2 2>&3)
 	 
 	exitstatus=$?

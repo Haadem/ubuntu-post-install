@@ -2,6 +2,16 @@
 
 # data_anal
 function data_anal {
+    show_info 'Installing '$NAME'...'
     pip3 install numpy
+    show_info 'Updating repository information...'
+    sudo apt-get update -y
+    show_success 'Done.'
+    # Install
+    show_info 'Installing '$NAME'...'
+    sudo apt-get install -y $PACKAGE
+    # Done
+    show_success 'Done.'
+    whiptail --title "Finished" --msgbox "Installation of $NAME complete." 8 78
     py_pck
 }

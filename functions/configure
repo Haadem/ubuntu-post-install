@@ -51,7 +51,7 @@ function config_files {
 	sudo cp  ./data/config/.config/ssh/config   ~/.ssh/
 	# Done
 	show_success 'Done.'
-	whiptail --title "Finished" --msgbox "Settings changed successfully." 8 78
+	whiptail --title "Finished" --msgbox "Config files copied successfully." 8 78
 	configure
 }
 
@@ -63,7 +63,7 @@ function dconf {
 	sudo cp  ./data/config/.config/dconf/user   ~/.config/dconf
 	# Done
 	show_success 'Done.'
-	whiptail --title "Finished" --msgbox "Settings changed successfully." 8 78
+	whiptail --title "Finished" --msgbox "Dconf installed successfully." 8 78
 	configure
 }
 
@@ -76,7 +76,7 @@ function basic {
 	sudo cp ./data/functions /etc/functions
 	# Done
 	show_success 'Done.'
-	whiptail --title "Finished" --msgbox "Settings changed successfully." 8 78
+	whiptail --title "Finished" --msgbox "Basic setup finished successfully." 8 78
 	configure
 }
 

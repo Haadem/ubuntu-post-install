@@ -70,7 +70,7 @@ echo -e "\033[0;37m$@\033[0m"
 #gnome	   'GNOME: Install latest GNOME software' \
 # Main
 function main {
-	eval `resize`
+	#eval `resize`
 	MAIN=$(whiptail \
 		--notags \
 		--title "Ubuntu Post-Install Script" \

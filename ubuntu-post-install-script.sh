@@ -79,18 +79,10 @@ function main {
 		configure   'CONFIG: Configure system' \
 		#codecs	  'EXTRA: Install Ubuntu Restricted Extras' \
 		github  'GITHUB: Clone and install applications from GitHub' \
+		#gnome	   'GNOME: Install latest GNOME software' \
 		py_pck 'PYTHON: Install Python and Python packages' \
 		development 'TOOLS: Install preferred development tools' \
 		update	  'UPDATE: Perform system update' \
-		utilities  'UTILITIES: Install preferred system utilities' \
-		
-		
-		
-		
-		#gnome	   'GNOME: Install latest GNOME software' \
-		
-		
-		
 		3>&1 1>&2 2>&3)
 	 
 	exitstatus=$?

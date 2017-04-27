@@ -1,0 +1,27 @@
+#!/bin/bash
+
+dir="$(dirname "$0")"
+
+source $dir/functions/github_rep/tensorflow
+
+
+# Setup Machine Learning enviroment
+function ml {
+	eval `resize`
+	GITHUB=$(whiptail \
+		--notags \
+		--title "GITHUB Installation" \
+		--menu "\nWhat GitHub repository to clone and install?" \
+		--ok-button "Install" \
+		--cancel-button "Go Back" \
+		$LINES $COLUMNS $(( $LINES - 12 )) \
+		'tensorflow'		   'Tensorflow' \
+		3>&1 1>&2 2>&3)
+	 
+	exitstatus=$?
+	if [ $exitstatus = 0 ]; then
+		$GITHUB
+	else
+		main
+	fi
+}

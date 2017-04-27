@@ -3,6 +3,7 @@
 dir="$(dirname "$0")"
 
 source $dir/functions/github_rep/tensorflow
+source $dir/functions/machine_learning/spark
 
 
 # Setup Machine Learning enviroment
@@ -15,7 +16,8 @@ function ml {
 		--ok-button "Install" \
 		--cancel-button "Go Back" \
 		$LINES $COLUMNS $(( $LINES - 12 )) \
-		'tensorflow'		   'Tensorflow' \
+		'spark'			   'Install Spark' \
+		'tensorflow'		   'Clone and install Tensorflow from github' \
 		3>&1 1>&2 2>&3)
 	 
 	exitstatus=$?

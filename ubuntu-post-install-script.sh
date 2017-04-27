@@ -80,7 +80,7 @@ function main {
 		codecs	  'Install Ubuntu Restricted Extras' \
 		thirdparty  'Install third-party applications' \
 		gnome	   'Install latest GNOME software' \
-		py_pck 'Install Python packages'' \
+		py_pck 'Install Python packages' \
 		configure   'Configure system' \
 		cleanup	 'Cleanup the system' \
 		3>&1 1>&2 2>&3)

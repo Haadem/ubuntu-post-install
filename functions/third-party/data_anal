@@ -2,14 +2,15 @@
 
 # data_anal
 function data_anal {
-    show_info 'Installing '$NAME'...'
-    pip3 install numpy
+    # Install
+    NAM1E="Numpy"
+    show_info 'Installing '$NAME1'...'
+    sudo pip3 install $NAME1
     show_info 'Updating repository information...'
-    sudo apt-get update -y
+    sudo pip3 install --upgrade $NAME1
     show_success 'Done.'
     # Install
-    show_info 'Installing '$NAME'...'
-    sudo apt-get install -y $PACKAGE
+
     # Done
     show_success 'Done.'
     whiptail --title "Finished" --msgbox "Installation of $NAME complete." 8 78

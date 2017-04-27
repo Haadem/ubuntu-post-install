@@ -27,11 +27,11 @@ function py3 {
 		# Done
 		show_success 'Done.'
 		whiptail --title "Finished" --msgbox "Installation of $NAME complete." 8 78
-		thirdparty
+		py_pck
 	else
 		# Already installed
 		show_success $NAME 'already installed.'
 		whiptail --title "Finished" --msgbox "$NAME is already installed." 8 78
-		thirdparty
+		py_pck
 	fi
 }

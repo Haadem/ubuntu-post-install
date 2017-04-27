@@ -5,18 +5,18 @@ dir="$(dirname "$0")"
 source $dir/functions/third-party/data_anal
 
 
-# Install Third-Party Applications
+# Install 
 function py_pck {
 	eval `resize`
 	THIRDPARTY=$(whiptail \
 		--notags \
-		--title "Third-Party Installation" \
-		--menu "\nWhat third-party software would you like to install?" \
+		--title "Python Installation" \
+		--menu "\nWhat do you want to install?" \
 		--ok-button "Install" \
 		--cancel-button "Go Back" \
 		$LINES $COLUMNS $(( $LINES - 12 )) \
 		'py3' 'Install Python3 and pip3' \
-		'py2' 'Install Python2 and pip2 \
+		'py2' 'Install Python2 and pip2' \
 		'data_anal' 'Data Analyst: Numnpy, Pandas, SkLearn' \
 		3>&1 1>&2 2>&3)
 	 

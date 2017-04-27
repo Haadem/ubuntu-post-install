@@ -3,6 +3,6 @@
 # data_anal
 function data_anal {
     pip3 install numpy
-		py_pck
-	fi
+    py_pck
+    fi
 }

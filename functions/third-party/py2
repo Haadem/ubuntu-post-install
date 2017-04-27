@@ -1,8 +1,8 @@
 
 #!/bin/bash
 
-# Python3
-function py3 {
+# Python2
+function py2 {
 	# Variables
 	PACKAGE=python2
 	PPANAME=

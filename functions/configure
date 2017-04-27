@@ -72,10 +72,10 @@ function dconf {
 function basic {
 	show_info 'Copying dconf db'
 	show_warning 'Requires root privileges'
-	set -x
+	set -v
 	mkdir ~/projects
 	sudo cp ./data/functions /etc/functions
-	set +x
+	set +v
 	# Done
 	show_success 'Done.'
 	read -t5 -n1 -r -p 'Basic setup finished successfully. Press any key in the next five seconds...' key

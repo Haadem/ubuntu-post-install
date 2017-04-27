@@ -75,7 +75,7 @@ function main {
 		--title "Ubuntu Post-Install Script" \
 		--menu "\nWhat would you like to do?" \
 		--cancel-button "Quit" \
-		$LINES $COLUMNS $(( $LINES - 12 )) \
+		$LINES $COLUMNS $(( $LINES - 11 )) \
 		favs	   'APPS: Install preferred applications' \
 		thirdparty  'APPS SELECT: Install third-party applications' \
 		cleanup	 'CLEAN: Cleanup the system' \

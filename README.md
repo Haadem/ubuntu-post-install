@@ -7,7 +7,7 @@ Original Author: [Sam Hewitt](https://github.com/snwh)
 
 Adapted to setup a standard data scientist enviroment!
 
-    Python, Tensorflow, Tensorflow Serving, Spark and much more!!.
+    Python, Pandas, SkLearn, Tensorflow, Tensorflow Serving, Spark and much more!!.
 
 Modifying Author: [Sven Haadem](https://github.com/haadem)
 

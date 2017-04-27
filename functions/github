@@ -3,7 +3,7 @@
 
 dir="$(dirname "$0")"
 
-source $dir/functions/github/tensorflow
+source $dir/functions/github_rep/tensorflow
 
 
 # Install Third-Party Applications

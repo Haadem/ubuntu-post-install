@@ -79,6 +79,7 @@ function main {
 		development 'Install preferred development tools' \
 		codecs	  'Install Ubuntu Restricted Extras' \
 		thirdparty  'Install third-party applications' \
+		github  'Clone and install applications from GitHub' \
 		gnome	   'Install latest GNOME software' \
 		py_pck 'Install Python and Python packages' \
 		configure   'Configure system' \

@@ -72,10 +72,12 @@ function dconf {
 function basic {
 	show_info 'Copying dconf db'
 	show_warning 'Requires root privileges'
+	echo on
 	mkdir ~/projects
 	sudo cp ./data/functions /etc/functions
 	# Done
 	show_success 'Done.'
+	echo off
 	read -t5 -n1 -r -p 'Basic setup finished successfully. Press any key in the next five seconds...' key
 	#whiptail --title "Finished" --msgbox "Basic setup finished successfully." 8 78
 	configure

@@ -2,9 +2,9 @@
 
 dir="$(dirname "$0")"
 
-source $dir/python/third-party/py3
-source $dir/python/third-party/py2
-source $dir/python/third-party/data_anal
+source $dir/functions/python/py3
+source $dir/functions/python/py2
+source $dir/functions/python/data_anal
 
 
 # Install 

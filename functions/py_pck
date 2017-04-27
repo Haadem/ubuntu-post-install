@@ -6,7 +6,7 @@ source $dir/functions/third-party/data_anal
 
 
 # Install Third-Party Applications
-function thirdparty {
+function py_pck {
 	eval `resize`
 	THIRDPARTY=$(whiptail \
 		--notags \

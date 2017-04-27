@@ -64,6 +64,8 @@ show_listitem(){
 echo -e "\033[0;37m$@\033[0m"
 }
 
+#codecs	  'EXTRA: Install Ubuntu Restricted Extras' \
+#gnome	   'GNOME: Install latest GNOME software' \
 # Main
 function main {
 	eval `resize`
@@ -77,9 +79,7 @@ function main {
 		thirdparty  'APPS SELECT: Install third-party applications' \
 		cleanup	 'CLEAN: Cleanup the system' \
 		configure   'CONFIG: Configure system' \
-		#codecs	  'EXTRA: Install Ubuntu Restricted Extras' \
 		github  'GITHUB: Clone and install applications from GitHub' \
-		#gnome	   'GNOME: Install latest GNOME software' \
 		py_pck 'PYTHON: Install Python and Python packages' \
 		development 'TOOLS: Install preferred development tools' \
 		update	  'UPDATE: Perform system update' \

@@ -15,6 +15,8 @@ function py_pck {
 		--ok-button "Install" \
 		--cancel-button "Go Back" \
 		$LINES $COLUMNS $(( $LINES - 12 )) \
+		'py3' 'Install Python3 and pip3' \
+		'py2' 'Install Python2 and pip2 \
 		'data_anal' 'Data Analyst: Numnpy, Pandas, SkLearn' \
 		3>&1 1>&2 2>&3)
 	 

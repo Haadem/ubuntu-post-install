@@ -23,6 +23,7 @@ function spark {
 		cd spark-1.6.0
 		sbt/sbt assembly
 		# Cleanup and finish
+		cd ..
 		rm spark-1.6.0.tgz
 		# Done
 		show_success 'Done.'

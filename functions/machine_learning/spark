@@ -3,45 +3,35 @@
 # spark
 function spark {
 	# Variables
-	PACKAGE=pycharm
-	NAME="pycharm"
+	PACKAGE=spark
+	NAME="spark"
+	VERSION="1.6"
 	# Install
 	show_header 'Begin '$NAME' installation'
 	# Check if already installed
-	show_info 'Checking if '$NAME' already installed...'
-	PKGCHECK=$(dpkg-query -W --showformat='${Status}\n' $PACKAGE|grep "install ok installed")
+	#show_info 'Checking if '$NAME' already installed...'
+	#PKGCHECK=$(dpkg-query -W --showformat='${Status}\n' $PACKAGE|grep "install ok installed")
+	
 	if [ "" == "$PKGCHECK" ]; then
 		echo $NAME 'is not installed. Proceeding'
-		show_info 'Downloading '$NAME'...'
-		# Download Debian file that matches system architecture
-		case `uname -i` in
-			i386|i486|i586|i686)
-				
-				;;
-			x86_64)
-				wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add 
-				sudo apt update
-				sudo apt install pycha
-				;;
-			*)
-				whiptail --title "No remote packages available to download." --msgbox "Error." 8 78
-				;;
-		esac
+		show_info 'Downloading '$NAME' version $VERSION...'
+		wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.0.tgz
 		# Install package(s)
 		show_info 'Installing '$NAME'...'
 		show_warning 'Requires root privileges'
-		sudo dpkg -i dropbox*.deb
-		sudo apt-get install -fy
+		sudo tar xvf spark-1.6.0.tgz
+		cd spark-1.6.0
+		sbt/sbt assembly
 		# Cleanup and finish
-		rm dropbox*.deb
+		rm spark-1.6.0.tgz
 		# Done
 		show_success 'Done.'
 		whiptail --title "Finished" --msgbox "Installation of $NAME complete." 8 78
-		thirdparty
+		ml
 	else
 		# Already installed
 		show_success $NAME 'already installed.'
 		whiptail --title "Finished" --msgbox "$NAME is already installed." 8 78
-		thirdparty
+		ml
 	fi
 }

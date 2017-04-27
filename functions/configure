@@ -40,6 +40,18 @@ function apport {
 	configure
 }
 
+
+# 
+function config_files {
+	show_info 'Changing display of startup applications...'
+	show_warning 'Requires root privileges'
+	ECHO doing
+	# Done
+	show_success 'Done.'
+	whiptail --title "Finished" --msgbox "Settings changed successfully." 8 78
+	configure
+}
+
 # Configure System
 function configure {
 	eval `resize`

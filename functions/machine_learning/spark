@@ -23,7 +23,7 @@ function spark {
 		sudo ln -s /usr/local/spark-2.1.0-bin-hadoop2.7 /usr/local/spark
 		grep -q -F 'export SPARK_HOME' ~/.bashrc || echo 'export SPARK_HOME=/usr/local/spark' >> ~/.bashrc
 		#echo 'export SPARK_HOME=/usr/local/spark-2.1.0-bin-hadoop2.7' >> ~/.bashrc 
-		echo 'export PATH=$SPARK_HOME/bin:$PATH' >> ~/.bashrc 
+		echo 'export PATH=$SPARK_HOME/bin:$SPARK_HOME:$PATH' >> ~/.bashrc 
 		echo 'export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH' >> ~/.bash
 		rm park-2.1.0-bin-hadoop2.7.tgz
 		# Cleanup and finish

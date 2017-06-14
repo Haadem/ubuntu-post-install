@@ -1,0 +1,6 @@
+# start dropbox
+if [ -z "$(pgrep -x dropbox)" ] ; then
+  /usr/bin/dropbox start
+fi
+xrandr --output DVI-D-0  --auto --rotate left
+wmname LG3D && PYCHARM_JDK=/usr/lib/jvm/java-6-openjdk-amd64 pycharm &
